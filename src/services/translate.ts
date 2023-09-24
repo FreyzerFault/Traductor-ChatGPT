@@ -3,8 +3,8 @@ import { type FromLanguage, type Language } from '../types'
 import { type ChatCompletionMessageParam } from 'openai/resources/chat/index.mjs'
 import { SUPPORTED_LANGUAGES } from '../config'
 
-// const apiKey = import.meta.env.OPENAI_API_KEY
-const apiKey = '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'
+const apiKey = import.meta.env.VITE_OPENAI_API_KEY
+// const apiKey = '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'
 
 const openai = new OpenAI({ apiKey, dangerouslyAllowBrowser: true })
 
