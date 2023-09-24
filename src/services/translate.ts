@@ -4,7 +4,7 @@ import { type ChatCompletionMessageParam } from 'openai/resources/chat/index.mjs
 import { SUPPORTED_LANGUAGES } from '../config'
 
 // const apiKey = import.meta.env.OPENAI_API_KEY
-const apiKey = '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'
+const apiKey = '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'
 
 const openai = new OpenAI({ apiKey, dangerouslyAllowBrowser: true })
 
