@@ -1,0 +1,17 @@
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  gap: 20px;
+  height: 100px;
+}
+
+header > h1 {
+  margin: 0;
+  font-size: 4em;
+}
+
+header > img {
+  height: 100%;
+}
