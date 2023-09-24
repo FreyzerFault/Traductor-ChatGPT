@@ -12,8 +12,6 @@ import { useDebounce } from '../hooks/useDebounce'
 
 import { translate } from '../services/translate'
 
-import 'boxicons'
-
 export function Translator() {
   const {
     state,
