@@ -6,7 +6,7 @@ import { Button, Col, Container, Row, Stack } from 'react-bootstrap'
 import { LanguageSelector } from './LanguageSelector'
 import { TextArea } from './TextArea'
 
-import { useCallback, useEffect, useState } from 'react'
+import { useCallback, useEffect } from 'react'
 import { useTranslator } from '../hooks/useTranslator'
 import { useDebounce } from '../hooks/useDebounce'
 
@@ -90,12 +90,7 @@ export function Translator() {
                     doTranslation()
                   }}
                 >
-                  <box-icon
-                    type='solid'
-                    name='right-arrow'
-                    size='md'
-                    color='cyan'
-                  />
+                  <img src='/play.svg' alt='translate' />
                 </Button>
                 <Button
                   className='toggle-auto-typing-button'
@@ -104,11 +99,9 @@ export function Translator() {
                     toggleAutoTyping()
                   }}
                 >
-                  <box-icon
-                    type={autoTyping ? 'solid' : ''}
-                    name={autoTyping ? 'toggle-right' : 'toggle-left'}
-                    size='md'
-                    color='cyan'
+                  <img
+                    src={autoTyping ? '/toggle-on.svg' : '/toggle-off.svg'}
+                    alt='translate'
                   />
                 </Button>
               </Stack>

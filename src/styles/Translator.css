@@ -29,6 +29,12 @@ header > img {
   padding: 8px;
   width: 60px;
 }
+/* TOGGLE AUTO TYPING BUTTON */
+.toggle-auto-typing-button {
+  margin: 0;
+  padding: 8px;
+  width: 60px;
+}
 
 .translate-button:active,
 .switch-button:active,

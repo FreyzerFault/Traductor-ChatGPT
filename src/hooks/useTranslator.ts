@@ -14,7 +14,7 @@ const initialState: AppState = {
   fromText: '',
   result: '',
   loading: false,
-  autoTyping: true,
+  autoTyping: false,
 }
 
 function reducer(state: AppState, action: Action): AppState {
