@@ -1,3 +1,3 @@
 # TRADUCTOR
 
-## Google Translator Clone usando ChatGPT + React + TS
+## Google Translator Clone usando ChatGPT + React + Bootstrap + TS

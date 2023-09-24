@@ -2,7 +2,7 @@ header {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: start;
+  justify-content: space-evenly;
   gap: 20px;
   height: 100px;
 }
@@ -14,4 +14,46 @@ header > h1 {
 
 header > img {
   height: 100%;
+}
+
+/* SWITCH BUTTON */
+.switch-button {
+  fill: var(--text-main);
+  margin: 0;
+  padding: 8px;
+}
+
+/* TRANSLATE BUTTON */
+.translate-button {
+  margin: 0;
+  padding: 8px;
+  width: 60px;
+}
+
+.translate-button:active,
+.switch-button:active,
+.toggle-auto-typing-button:active {
+  border: 0;
+}
+
+/* TEXT AREA */
+.textarea {
+  color: var(--text-bright);
+  background-color: var(--background);
+  border: 0;
+}
+.textarea::placeholder {
+  color: var(--text-main);
+  opacity: 1;
+}
+.textarea:focus {
+  background-color: var(--background);
+  color: var(--text-bright);
+}
+
+/* TO TEXT */
+.textarea.to {
+  background-color: var(--background-alt);
+  color: var(--text-bright);
+  cursor: default;
 }
