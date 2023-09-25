@@ -57,9 +57,30 @@ header > img {
   color: var(--text-bright);
 }
 
-/* TO TEXT */
-.textarea.to {
+/* TO TEXT (Resultado) */
+.result {
+  position: relative;
+}
+
+.result .textarea.to {
   background-color: var(--background-alt);
   color: var(--text-bright);
   cursor: default;
+}
+
+.result button {
+  position: absolute;
+  right: 10px;
+  bottom: 20px;
+
+  margin: 0;
+  padding: 0;
+
+  width: 32px;
+  height: 32px;
+  color: grey;
+}
+
+.result .copy-clipboard-button {
+  right: 60px;
 }

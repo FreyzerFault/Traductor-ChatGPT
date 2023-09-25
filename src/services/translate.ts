@@ -8,7 +8,7 @@ const apiKey = import.meta.env.VITE_OPENAI_API_KEY
 
 const openai = new OpenAI({ apiKey, dangerouslyAllowBrowser: true })
 
-const mock = false
+const mock = true
 
 export async function translate({
   fromLanguage,

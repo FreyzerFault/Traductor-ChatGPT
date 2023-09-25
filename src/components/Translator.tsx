@@ -1,6 +1,6 @@
 import '../styles/Translator.css'
 
-import { AUTO_LANGUAGE } from '../config'
+import { AUTO_LANGUAGE, VOICE_LANGUAGES } from '../config'
 
 import { Button, Col, Container, Row, Stack } from 'react-bootstrap'
 import { LanguageSelector } from './LanguageSelector'
@@ -45,6 +45,16 @@ export function Translator() {
       doTranslation()
     }
   }, [debouncedFromText, fromLanguage, toLanguage])
+
+  const handleCopyToClipboard = () => {
+    navigator.clipboard.writeText(result).catch(() => {})
+  }
+
+  const handleSpeak = () => {
+    const utterance = new SpeechSynthesisUtterance(result)
+    utterance.lang = VOICE_LANGUAGES[toLanguage]
+    speechSynthesis.speak(utterance)
+  }
 
   return (
     <>
@@ -107,7 +117,7 @@ export function Translator() {
 
             {/* TO */}
             <Col>
-              <Stack gap={1}>
+              <Stack className='result' gap={1}>
                 <LanguageSelector
                   type='to'
                   value={toLanguage}
@@ -119,6 +129,20 @@ export function Translator() {
                   value={result}
                   onChange={setResult}
                 />
+                <Button
+                  className='copy-clipboard-button'
+                  variant='link'
+                  onClick={handleCopyToClipboard}
+                >
+                  <img src='/copy.svg' alt='copy to clipboard icon' />
+                </Button>
+                <Button
+                  className='speak-button'
+                  variant='link'
+                  onClick={handleSpeak}
+                >
+                  <img src='/speaker.svg' alt='speak text icon' />
+                </Button>
               </Stack>
             </Col>
           </Row>

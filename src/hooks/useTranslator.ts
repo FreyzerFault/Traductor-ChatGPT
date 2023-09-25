@@ -29,6 +29,7 @@ function reducer(state: AppState, action: Action): AppState {
         newState.fromLanguage = state.toLanguage
         newState.toLanguage = state.fromLanguage
         newState.loading = state.fromText !== ''
+        newState.result = state.autoTyping ? '' : state.result
       }
       break
 
